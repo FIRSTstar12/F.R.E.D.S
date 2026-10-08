@@ -1,7 +1,7 @@
 import json
 import os
 
-from eventsFunctions import getEvents
+from eventsFunctions import getEvents, pullEventData
 from utilityFunctions import intro, clear, wait
 
 if os.path.exists("eventData") == False:
@@ -10,8 +10,9 @@ if os.path.exists("eventData") == False:
         os.mkdir("eventData")
         print("eventData folder created")
 
-intro()
-events = getEvents(2026)
+# intro()
+# events = getEvents(2026)
+pullEventData()
 
-for event in events:
-    print(event["key"], event["name"])
+# for event in events:
+#     print(event["key"], event["name"])
